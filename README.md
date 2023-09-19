@@ -1,2 +1,3 @@
-# SQL-
-SQL 
+SELECT * FROM OCORRENCIAS
+WHERE ocor_codg = 4727301;
+
