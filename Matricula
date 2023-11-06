@@ -1,0 +1,22 @@
+SELECT CPF, Matricula, Data_inicio, Data_final, Valor_Bolsa FROM   
+(
+    select Distinct PESP_PESE_PFIS_IDEN vcpfid , lpad(pecc_numr_cpf,11,0) cpf   
+           , lpad(pesp_seql,7,0) Matricula
+           , decode(pesp_tipo_regime_previdencia,0,'N','S') previd 
+           , DECODE(TPEN_TIPO, 'E','ESTAGI?RIO', '**************' ) GRUPO
+           , PESP_DATA_INICIO_BENEFICIO Data_inicio, PESP_DATA_TERMINO_BENEFICIO Data_final, RTPE_VALR_REMUNERACAO Valor_Bolsa 
+    from   pensoes_especiais , pensoes_esp_contra_cheques p , pensionistas_especiais , pessoas_fisicas pf , orgaosrh o , tipos_pensoes, RUBRICAS_PENSOES_ESPECIAIS, REMUNERACOES_TIPOS_PENSOES
+    where  p.pecc_numr_ano_folha=2023 and p.pecc_numr_mes_folha=08 and (RUPE_DATA_FIM_VIGENCIA is null or RUPE_DATA_FIM_VIGENCIA >= to_date('01082023','DDMMYYYY'))
+    and     TPEN_TIPO = 'E' and pecc_orrh_iden=4
+    and    pecc_pesp_seql  = pesp_seql
+    and    pese_pfis_iden  = pesp_pese_pfis_iden 
+    and    pfis_iden       = pesp_pese_pfis_iden 
+    and    o.orrh_iden     = pecc_orrh_iden 
+    and    tpen_codg       = pesp_tpen_codg 
+    and    RUPE_PESP_SEQL  = pesp_seql
+    and PECC_TPEN_DESC like '%Estagi%'
+    and RTPE_VALR_REMUNERACAO like '%1000%'
+    and ((RTPE_ORRH_IDEN is not null and pesp_orrh_iden = RTPE_ORRH_IDEN) or (RTPE_ORRH_IDEN is null))
+    and ((RTPE_JTRA_CODG is not null and pesp_jtra_codg = RTPE_JTRA_CODG) or (RTPE_JTRA_CODG is null))
+    group by PESP_PESE_PFIS_IDEN, pecc_numr_cpf, pesp_seql, pesp_tipo_regime_previdencia, TPEN_TIPO, PESP_DATA_INICIO_BENEFICIO, PESP_DATA_TERMINO_BENEFICIO, RTPE_VALR_REMUNERACAO 
+)
