@@ -1,0 +1,3 @@
+SELECT *
+FROM itens
+WHERE cliente_id = 4;
