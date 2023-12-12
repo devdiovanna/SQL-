@@ -1,0 +1,2 @@
+DELETE FROM itens
+WHERE quantidade = 0;
