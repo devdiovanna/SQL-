@@ -1,0 +1,4 @@
+SELECT *
+FROM produtos
+WHERE preco BETWEEN 25 AND 75
+AND nome LIKE '%Slim%';
