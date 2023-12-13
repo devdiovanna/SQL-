@@ -1,0 +1,4 @@
+SELECT *
+FROM produtos
+WHERE preco BETWEEN 30 AND 60
+ORDER BY preco DESC;
