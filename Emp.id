@@ -1,0 +1,10 @@
+SELECT
+  emp.id,
+  emp.nome,
+  dep.nome AS departamento
+FROM
+  funcionarios emp
+INNER JOIN
+  departamentos dep
+ON
+  emp.departamento_id = dep.id;
