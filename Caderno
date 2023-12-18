@@ -1,0 +1,5 @@
+INSERT INTO produtos (nome, preco, quantidade)
+VALUES
+('Caderno', 10.00, 100),
+('Lápis', 2.00, 200),
+('Borracha', 1.00, 300);
