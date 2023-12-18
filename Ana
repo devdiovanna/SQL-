@@ -1,0 +1,7 @@
+INSERT INTO clientes (nome, email, telefone, idade)
+VALUES
+('João da Silva', 'joao@silva.com', '(11) 9999-1234', 30),
+('Maria da Silva', 'maria@silva.com', '(12) 9876-5432', 25),
+('José da Silva', 'jose@silva.com', '(13) 9765-4321', 20),
+('Ana da Silva', 'ana@silva.com', '(14) 9654-3210', 15),
+('Pedro da Silva', 'pedro@silva.com', '(15) 9543-2100', 10);
