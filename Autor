@@ -1,0 +1,19 @@
+INSERT INTO Livros (titulo, autor, genero, ano_publicacao, preco)
+VALUES
+('O Último dos Jedi', 'J. J. Abrams', 'Ficção Científica', 2017, 39.90),
+('O Hobbit', 'J. R. R. Tolkien', 'Fantasia', 1937, 29.90),
+('Harry Potter e a Pedra Filosofal', 'J. K. Rowling', 'Fantasia', 1997, 34.90),
+('O Senhor dos Anéis: A Sociedade do Anel', 'J. R. R. Tolkien', 'Fantasia', 1954, 49.90),
+('A Guerra dos Tronos', 'George R. R. Martin', 'Fantasia', 1996, 39.90),
+('Crepúsculo', 'Stephenie Meyer', 'Romance', 2005, 29.90),
+('50 Tons de Cinza', 'E. L. James', 'Romance', 2011, 34.90),
+('O Código Da Vinci', 'Dan Brown', 'Mistério', 2003, 39.90),
+('O Pequeno Príncipe', 'Antoine de Saint-Exupéry', 'Infantil', 1943, 29.90),
+('A Divina Comédia', 'Dante Alighieri', 'Épico', 1320, 24.90),
+('O Cisne Negro', 'Naomi Klein', 'Não-ficção', 2007, 34.90),
+('Sapiens: Uma Breve História da Humanidade', 'Yuval Noah Harari', 'Não-ficção', 2011, 39.90),
+('Homo Deus: Uma Breve História do Amanhã', 'Yuval Noah Harari', 'Não-ficção', 2015, 39.90),
+('O Poder do Hábito: Por que Fazemos o Que Fazemos na Vida e nos Negócios', 'Charles Duhigg', 'Não-ficção', 2012, 34.90),
+('O Monge Que Vendeu o Seu Ferrari: Uma História sobre o Poder da Sabedoria Interior', 'Robin Sharma', 'Autoajuda', 1997, 29.90),
+('O Segredo: A Lei da Atração em Ação', 'Rhonda Byrne', 'Autoajuda', 2006, 24.90),
+('O Milagre da Manhã: Transforme Seus Manhãs e Mude Sua Vida', 'Hal Elrod', 'Autoajuda', 2012, 34.90);
