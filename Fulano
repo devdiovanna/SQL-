@@ -1,0 +1,16 @@
+INSERT INTO clientes (nome, cpf, email, data_nascimento, sexo)
+SELECT
+  'Fulano da Silva',
+  '123.456.789-00',
+  'fulano@silva.com',
+  '1980-01-01',
+  'M'
+UNION ALL
+SELECT
+  'Beltrano de Souza',
+  '987.654.321-00',
+  'beltrano@souza.com',
+  '1990-02-02',
+  'M'
+UNION ALL
+...
